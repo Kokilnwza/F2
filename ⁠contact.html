@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดต่อเรา & จองโต๊ะ — SUSHI POP!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 14px 18px;
+      font-family: inherit;
+      font-size: 1rem;
+      border: var(--border-thick);
+      border-radius: 14px;
+      box-shadow: 3px 3px 0 var(--ink-black);
+      outline: none;
+      background: var(--bg-cream);
+    }
+    .form-control:focus {
+      background: #fff;
+      box-shadow: 5px 5px 0 var(--ink-black);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-brand">🍣 SUSHI<span>POP!</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="services.html">บริการ</a></li>
+        <li><a href="work.html">เมนูเด็ด</a></li>
+        <li><a href="process.html">กรรมวิธี</a></li>
+        <li><a href="contact.html" class="active">ติดต่อเรา</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div style="text-align: center; margin: 30px 0 50px;">
+      <span class="badge" style="background: var(--pastel-yellow);">SAY HELLO!</span>
+      <h1>สำรองที่นั่ง & สอบถาม</h1>
+      <p style="max-width: 600px; margin: 16px auto;">พร้อมมาร่วมสัมผัสประสบการณ์ซูชิสุดมันส์หรือยัง? ส่งข้อความหาเราได้เลย!</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: start;">
+      <!-- Contact Form -->
+      <div class="pop-card" style="background: var(--pure-white);">
+        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">จองโต๊ะด่วน 🍣</h3>
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('ขอบคุณสำหรับการสำรองที่นั่ง! ทีมงาน SUSHI POP! จะรีบโทรยืนยันกลับครับ');">
+          <div class="form-group">
+            <label for="name">ชื่อ - นามสกุล</label>
+            <input type="text" id="name" class="form-control" placeholder="เช่น แป้ง วรัญญา" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">เบอร์โทรศัพท์</label>
+            <input type="tel" id="phone" class="form-control" placeholder="08X-XXX-XXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="service">บริการที่สนใจ</label>
+            <select id="service" class="form-control">
+              <option value="omakase">Playful Omakase Bar</option>
+              <option value="alacarte">Dine-in (A La Carte)</option>
+              <option value="catering">Event & Catering บริการนอกสถานที่</option>
+              <option value="delivery">Party Box Delivery</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">รายละเอียดเพิ่มเติม (จำนวนคน / วันที่ / ข้อจำกัดอาหาร)</label>
+            <textarea id="message" rows="4" class="form-control" placeholder="ระบุวันที่ เวลา และจำนวนคน หรืออาหารที่แพ้ได้ที่นี่..."></textarea>
+          </div>
+          <button type="submit" class="btn-pop" style="width: 100%; justify-content: center;">ยืนยันการส่งข้อมูล 🚀</button>
+        </form>
+      </div>
+
+      <!-- Info & Map Card -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="pop-card" style="background: var(--pastel-peach);">
+          <h3>📍 ร้านตั้งอยู่ที่ไหน?</h3>
+          <p style="margin: 12px 0;">โครงการ The Pop Block ซอยสุขุมวิท 49, แขวงคลองตันเหนือ, เขตวัฒนา, กรุงเทพฯ (มีที่จอดรถสะดวกสบาย)</p>
+          <p><strong>📞 Hotline:</strong> 02-999-POP8 (02-999-7678)</p>
+          <p><strong>💬 LINE Official:</strong> @sushipopbkk</p>
+          <p><strong>📸 Instagram:</strong> @sushipop.official</p>
+        </div>
+
+        <div class="pop-card" style="background: var(--pastel-yellow);">
+          <h3>⏰ ช่วงเวลาเปิดรับจอง</h3>
+          <p style="margin-top: 10px;">• <strong>รอบกลางวัน:</strong> 11:30 - 14:30 น.<br>• <strong>รอบเย็น:</strong> 17:30 - 22:00 น.<br><em>* แนะนำให้จองล่วงหน้าอย่างน้อย 2 วัน สำหรับคอร์ส Omakase</em></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-bottom">
+      &copy; 2026 SUSHI POP! Co., Ltd. All Rights Reserved. Stay Bold & Eat Fresh!
+    </div>
+  </footer>
+
+</body>
+</html>
